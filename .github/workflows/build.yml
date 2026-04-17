@@ -86,7 +86,9 @@ jobs:
 
       - name: Setup and bootstrap
         run: |
-          make setup-minimal
+          git config --global user.email ci@local
+          git config --global user.name ci
+          make setup
           make mozbootstrap
           mkdir -p dist
 
